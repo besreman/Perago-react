@@ -1,0 +1,33 @@
+table{
+    border: 1px solid #EEEEEE;
+    width: 100%;
+
+    thead{
+        background: rgb(57, 0, 0);
+        color: #EEEEEE;
+
+        td{
+            padding: 0 18px;
+        }
+    }
+
+    tr{
+        width: 100%;
+        padding: 18px 0;
+
+        &:nth-of-type(odd){
+            background-color: #EEEEEE;
+        }
+
+        td{
+            padding: 0 .4rem;
+            button{
+                background-color: rgb(227, 46, 46);
+                align-content: center;
+                padding-top: 4px;
+                padding: 0 5px;
+                font-size: .7rem;
+                }
+        }
+    }
+}

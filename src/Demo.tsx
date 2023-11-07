@@ -3,8 +3,16 @@ import '@mantine/core/styles.css';
 import { useState } from 'react';
 import CreateRole from './CreateRole';
 import ShowEmployees from './demo/ShowEmployees'
+import AddEmployee from './demo/AddEmployee';
 
-const Employees = [
+interface emp {
+  id: string;
+  name: string;
+}
+
+type empArray = emp[];
+
+const Employees: empArray = [
     {name:'Nathy Abebe',
     id:'EITM21'},
     {name:'Minalu Mesele',
@@ -40,6 +48,8 @@ const Demo: React.FC = () => {
          return <CreateRole />
         else if(selected === 'Show employee list')
          return <ShowEmployees props = {Employees}/>
+         else if(selected === 'Register employee')
+         return <AddEmployee/>
         else
         return <h1>other options selected!</h1>
       }

@@ -1,0 +1,21 @@
+form{
+
+
+    fieldset{
+        align-items: start;
+        div{
+            margin-bottom: 1rem;
+            justify-content: space-between;
+            
+            input{
+                align-items: end;
+                background-color: azure;
+                color: black;
+            }
+        }
+        button{
+            padding: 0 10px;
+            background: green;
+        }
+    }
+}
