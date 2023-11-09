@@ -1,22 +1,50 @@
-import './addEmpStyle.css'
+import { Employee } from "./Employee";
 
-const AddEmployee = () => {
-  return (
-    <>
-    <h3>Add new employee to our company</h3>
-    <form>
-        <fieldset>
-            <legend>Fill the required informations below</legend>
-            <div><label htmlFor="">Name</label><input type='text' name='name'/></div>
-            <div><label htmlFor="">ID number</label><input type='text' name='id'/></div>
-            <div><label htmlFor="">Role</label><input type='text' name='role'/></div>
-            <button type='submit' onClick={()=>{alert("added successfully")}}>add</button>
-        </fieldset>
-    </form>
-    
-    </>
-    
-  )
-}
+import { TextInput, Select } from "@mantine/core";
 
-export default AddEmployee
+const AddEmployee = (emp: Employee) => {
+	return (
+		<>
+			<h3>Add new emp to our company</h3>
+			<form className='w-fit'>
+				<fieldset>
+					<legend>Fill the required informations below</legend>
+					<TextInput
+						label='Name'
+						type='text'
+						name='name'
+						defaultValue={emp.name}
+					/>
+					<TextInput label='id' type='text' name='id' defaultValue={emp.id} />
+					<Select
+						label='Role'
+						placeholder='please select role'
+						data={["CEO", "CTO", "Tech lead"]}
+					/>
+					<TextInput
+						label='Salary'
+						type='text'
+						name='salary'
+						defaultValue={emp.salary}
+					/>
+					<TextInput
+						label='Address'
+						type='text'
+						name='address'
+						defaultValue={emp.address}
+					/>
+					<button
+						type='submit'
+						onClick={() => {
+							alert("added successfully");
+						}}
+					>
+						add
+					</button>
+				</fieldset>
+			</form>
+		</>
+	);
+};
+
+export default AddEmployee;
