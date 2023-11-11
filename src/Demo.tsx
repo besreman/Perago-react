@@ -5,7 +5,7 @@ import CreateRole from "./CreateRole";
 import ShowEmployees from "./demo/ShowEmployees";
 import AddEmployee from "./demo/AddEmployee";
 import { Employee } from "./demo/Employee";
-import TreeRender from "./demo/treeRender";
+import RenderTree from "./demo/tree/RenderTree";
 
 type empArray = Employee[];
 
@@ -56,7 +56,7 @@ const Demo: React.FC = () => {
 			return (
 				<AddEmployee id={""} name={""} role={""} address={""} salary={0} />
 			);
-		else if (selected === "Show roles hierarchy") return <TreeRender />;
+		else if (selected === "Roles hierarchy") return <RenderTree />;
 		else return <h1>other options selected!</h1>;
 	};
 
@@ -69,7 +69,7 @@ const Demo: React.FC = () => {
 					"Create role",
 					"Register employee",
 					"Show employee list",
-					"Show roles hierarchy",
+					"Roles hierarchy",
 				]}
 				value={selected}
 				onChange={(value) => {
