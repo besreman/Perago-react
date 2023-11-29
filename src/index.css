@@ -6,9 +6,10 @@
 	table {
 		border: 1px solid #eeeeee;
 		width: 100%;
+		height: fit-content;
 	}
 
-	table thead {
+	table thead tr th {
 		background: rgb(57, 0, 0);
 		color: #eeeeee;
 	}

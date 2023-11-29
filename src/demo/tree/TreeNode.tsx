@@ -3,7 +3,7 @@ import { List } from "@mantine/core";
 
 const TreeNode: React.FC<NodeProps> = ({ treeNodeModel }) => {
 	return (
-		<div className=''>
+		<div>
 			<h6>{treeNodeModel.name}</h6>
 			<List className=''>
 				{treeNodeModel.children.map((node) => (
