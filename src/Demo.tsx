@@ -1,6 +1,6 @@
 import { MantineProvider, Title } from "@mantine/core";
 import { IoIosPeople } from "react-icons/io";
-import { FaCriticalRole } from "react-icons/fa";
+import { SlPeople } from "react-icons/sl";
 import { CiHome } from "react-icons/ci";
 import { BsPersonAdd } from "react-icons/bs";
 import { TbHierarchy3 } from "react-icons/tb";
@@ -20,12 +20,12 @@ const Demo: React.FC = () => {
 				<div
 					className={`${
 						icon ? "w-72" : "w-20"
-					} duration-300 flex justify-center  pt-5 h-screen bg-black text-white relative`}
+					} duration-300 flex justify-center  pt-5 h-screen bg-blue-950 text-white relative`}
 				>
 					<img
 						src='control.png'
 						alt='control'
-						className={`absolute cursor-pointer -right-[15px] top-10 rounded-full border-6 border-black transition-transform transform -right15 ${
+						className={`w-8 absolute cursor-pointer -right-[15px] top-5 rounded-full border-6 border-black transition-transform transform -right15 ${
 							isRotated ? "rotate-180" : ""
 						}`}
 						onClick={() => {
@@ -64,26 +64,23 @@ const Demo: React.FC = () => {
 							</div>
 						</Link>
 
-						<Link to='createRole'>
-							<div className='flex gap-x-4 items-center p-3 hover:bg-blue-300'>
-								<FaCriticalRole
-									size='2rem'
-									className={`${!visible && "ml-3"}`}
-								/>
-								{visible && (
-									<Title order={4} className='origin-left'>
-										Create Role
-									</Title>
-								)}
-							</div>
-						</Link>
-
 						<Link to='ShowEmployees'>
 							<div className='flex gap-x-4 items-center p-3 hover:bg-blue-300'>
 								<IoIosPeople size='2rem' className={`${!visible && "ml-3"}`} />
 								{visible && (
 									<Title order={4} className='origin-left'>
 										Employees
+									</Title>
+								)}
+							</div>
+						</Link>
+
+						<Link to='createRole'>
+							<div className='flex gap-x-4 items-center p-3 hover:bg-blue-300'>
+								<SlPeople size='2rem' className={`${!visible && "ml-3"}`} />
+								{visible && (
+									<Title order={4} className='origin-left'>
+										Create Role
 									</Title>
 								)}
 							</div>
@@ -101,7 +98,7 @@ const Demo: React.FC = () => {
 						</Link>
 					</div>
 				</div>
-				<div className='flex justify-center'>
+				<div className=''>
 					<Outlet />
 				</div>
 			</div>

@@ -5,7 +5,8 @@ import Demo from "./Demo";
 import AddEmployee from "./AddEmployee";
 import Home from "./Home";
 import ShowEmployees from "./ShowEmployees";
-import RenderTree from "./demo/tree/RenderTree";
+import React from "react";
+import TreeNode from "./tree/TreeNode";
 //import { Employee } from "./Employee";
 
 //type empArray = Employee[];
@@ -37,7 +38,7 @@ function App() {
 						<Route path='addEmployee' element={<AddEmployee />}></Route>
 						<Route path='createRole' element={<CreateRole />}></Route>
 						<Route path='ShowEmployees' element={<ShowEmployees />}></Route>
-						<Route path='hierarchy' element={<RenderTree />}></Route>
+						<Route path='hierarchy' element={<TreeNode />}></Route>
 					</Route>
 				</Routes>
 			</BrowserRouter>
