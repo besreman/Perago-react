@@ -50,15 +50,16 @@ const AddEmployee = () => {
 
 	return (
 		<>
-			<Title order={1} className='text-xl font-bold'>
+			<Title order={1} className='text-xl font-bold mb-2'>
 				Add new employee to our company
 			</Title>
-			<form onSubmit={handleSubmit} className='bg-slate-200 p-5 mb-0'>
+			<form onSubmit={handleSubmit} className='bg-slate-200 p-5 ml-5'>
 				<fieldset>
-					<legend className='font-bold pb-2'>
+					<legend className='font-bold pb-2 opacity-50'>
 						Fill the required informations below
 					</legend>
 					<TextInput
+						className='mb-2'
 						label='Full Name of the Employee'
 						type='text'
 						name='name'
@@ -67,6 +68,7 @@ const AddEmployee = () => {
 					/>
 					<div>Role</div>
 					<select
+						className='mb-2'
 						value={selectedRole}
 						onChange={(e) => setSelectedRole(e.target.value)}
 					>
@@ -80,6 +82,7 @@ const AddEmployee = () => {
 						))}
 					</select>
 					<TextInput
+						className='mb-2'
 						label='Salary'
 						type='text'
 						name='salary'
@@ -87,6 +90,7 @@ const AddEmployee = () => {
 						onChange={(event) => setSalary(Number(event.currentTarget.value))}
 					/>
 					<TextInput
+						className='mb-2'
 						label='Address'
 						type='text'
 						name='address'
@@ -95,7 +99,7 @@ const AddEmployee = () => {
 					/>
 					<Button
 						type='submit'
-						className='bg-green-500 pt-0 mt-4 px-2 mr-1 shadow-md'
+						className='bg-green-500 pt-0 mt-4 px-2 ml-8 shadow-md'
 					>
 						Add The Employee
 					</Button>

@@ -1,6 +1,6 @@
 import { MantineProvider } from "@mantine/core";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CreateRole from "./CreateRole";
+import CreateRole from "./AddRole";
 import Demo from "./Demo";
 import AddEmployee from "./AddEmployee";
 import Home from "./Home";

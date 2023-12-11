@@ -28,21 +28,31 @@ const UpdateEmployee = (emp: Employee) => {
 	const updateEmployee = async (
 		employeeId: string,
 		updatedData: {
-			name?: string;
-			salary?: number;
-			address?: string;
-			role?: string;
+			Name?: string;
+			Role?: string;
+			Salary?: number;
+			Address?: string;
 		}
 	) => {
 		try {
 			const employeeDocRef = doc(employeeDb, "employee", employeeId);
+			alert(
+				"Employee data being updated! check the employee table for the update"
+			);
 
 			await updateDoc(employeeDocRef, updatedData);
-
-			console.log("Employee updated successfully!");
 		} catch (error) {
 			console.error("Error updating employee:", error);
 		}
+	};
+
+	const updateHundler = () => {
+		updateEmployee(emp.id, {
+			Name: emp.name,
+			Role: selectedRole,
+			Salary: emp.salary,
+			Address: emp.address,
+		});
 	};
 
 	return (
@@ -86,16 +96,8 @@ const UpdateEmployee = (emp: Employee) => {
 					/>
 					<button
 						type='submit'
+						onClick={updateHundler}
 						className='bg-green-500 pt-0 mt-4 px-2 mr-1 shadow-md'
-						onClick={() => {
-							updateEmployee(emp.id, {
-								name: emp.name,
-								salary: emp.salary,
-								address: emp.address,
-								role: String(emp.role),
-							});
-							alert("updated successfully");
-						}}
 					>
 						apply and save
 					</button>

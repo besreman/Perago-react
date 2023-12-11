@@ -1,9 +1,9 @@
 export interface Employee {
+	id: string;
 	name: string;
 	role: string;
 	address: string;
 	salary: number;
-	id: string;
 }
 
 export interface Role {

@@ -12,6 +12,7 @@
 	table thead tr th {
 		background: rgb(57, 0, 0);
 		color: #eeeeee;
+		padding-left: 1rem;
 	}
 
 	table thead td {
@@ -28,7 +29,7 @@
 	}
 
 	table tr td {
-		padding: 0 0.4rem;
+		padding-left: 1rem;
 	}
 
 	table tr td button {
